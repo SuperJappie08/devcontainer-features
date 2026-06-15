@@ -30,9 +30,8 @@ jobs:
 
       - name: Install npm
         if: ${{ startsWith(matrix.baseImage, 'ros') }}
-        run: |
-          apt update 
-          apt instal npm -y
+        shell: bash
+        run: sudo apt update && sudo apt install npm -y --no-install-recommends
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
