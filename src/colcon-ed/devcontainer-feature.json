@@ -1,0 +1,9 @@
+{
+  "name": "Colcon edit",
+  "id": "colcon-ed",
+  "version": "0.0.1",
+  "options": {},
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

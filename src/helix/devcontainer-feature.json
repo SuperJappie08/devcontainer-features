@@ -1,0 +1,21 @@
+{
+  "name": "Helix Editor",
+  "id": "helix",
+  "version": "0.0.1",
+  "description": "Install a minimum version of Helix",
+  "options": {
+    "force-git-release": {
+      "type": "boolean",
+      "default": false,
+      "description": "Force Helix to be installed from the GitHub release"
+    },
+    "minimum-version": {
+      "type": "string",
+      "default": "latest",
+      "description": "The minimum version to install (e.g. '25.04') or latest available"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

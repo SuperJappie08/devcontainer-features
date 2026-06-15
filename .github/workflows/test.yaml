@@ -13,14 +13,26 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - helix
+          - lemminx-linux
         baseImage:
           - debian:latest
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
+          - ros:rolling
+        include:
+          - features: colcon-mixin
+            baseImage: ros:rolling
+          - features: colcon-ed
+            baseImage: ros:rolling
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install npm
+        if: ${{ startsWith(matrix.baseImage, 'ros') }}
+        run: |
+          apt update 
+          apt instal npm -y
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
@@ -34,8 +46,10 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - colcon-ed
+          - colcon-mixin
+          - helix
+          - lemminx-linux
     steps:
       - uses: actions/checkout@v4
 

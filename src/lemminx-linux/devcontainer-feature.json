@@ -1,0 +1,16 @@
+{
+  "name": "Lemminx LSP",
+  "id": "lemminx-linux",
+  "version": "0.0.1",
+  "description": "Install the lemminx-linux XML LSP",
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "latest",
+      "description": "The version to install 'latest' or a tag"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

@@ -1,13 +1,9 @@
 {
-    "color_and_hello": {
+    "helix_and_lemminx": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "color": {
-                "favorite": "purple"
-            },
-            "hello": {
-                "greeting": "Greetings"
-            }
+            "helix": {},
+            "lemminx-linux": {}
         }
     }
 }
