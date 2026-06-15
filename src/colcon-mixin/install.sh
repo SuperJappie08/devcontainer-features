@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -6,13 +6,13 @@ FORCE_GIT_RELEASE="${FORCE_GIT_RELEASE:-"false"}"
 MINIMUM_VERSION="${MINIMUM_VERSION:-"latest"}"
 
 if [ "$(id -u)" -ne 0 ]; then
-    echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
-    exit 1
+	echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
+	exit 1
 fi
 
 if [ "$MINIMUM_VERSION" != "latest" ]; then
-    echo -e 'TODO: Minimum version'
-    exit 1
+	echo -e 'TODO: Minimum version'
+	exit 1
 fi
 
 if type apt-get >/dev/null 2>&1; then

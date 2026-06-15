@@ -1,0 +1,6 @@
+> [!IMPORTANT]
+> THIS IS INCOMPLETE
+> THIS IS BASED ON REFERENCE FEATURE
+
+# OS Support
+Only Debian-based for now

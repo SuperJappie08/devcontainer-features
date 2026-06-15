@@ -11,6 +11,7 @@
     }
   },
   "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils"
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates"
   ]
 }

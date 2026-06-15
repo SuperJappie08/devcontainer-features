@@ -1,0 +1,12 @@
+# top-most EditorConfig file
+root = true
+trim_trailing_whitespace = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[{*.bash,*.sh}]
+indent_style = tab
+switch_case_indent = true
