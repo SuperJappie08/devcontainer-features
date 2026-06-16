@@ -21,7 +21,7 @@ jobs:
           - mcr.microsoft.com/devcontainers/base:ubuntu
           - ros:rolling
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install npm
         if: ${{ startsWith(matrix.baseImage, 'ros') }}
@@ -45,7 +45,7 @@ jobs:
           - helix
           - lemminx-linux
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
