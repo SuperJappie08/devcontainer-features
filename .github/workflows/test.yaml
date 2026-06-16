@@ -20,11 +20,6 @@ jobs:
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
           - ros:rolling
-        include:
-          - features: colcon-mixin
-            baseImage: ros:rolling
-          - features: colcon-ed
-            baseImage: ros:rolling
     steps:
       - uses: actions/checkout@v4
 
