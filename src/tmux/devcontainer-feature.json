@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json",
+  "name": "Tmux",
+  "id": "tmux",
+  "version": "0.0.1",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates"
+  ]
+}

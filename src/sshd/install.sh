@@ -171,8 +171,8 @@ echo "AcceptEnv SSH_PWD COLORTERM" >>/etc/ssh/sshd_config
 
 # Write to the profile
 cat >>"${user_home}/.profile" <<'EOF'
-if [ -n "\$SSH_PWD" ]; then
-	cd "\$SSH_PWD"
+if [ -n "$SSH_PWD" ]; then
+	cd "$SSH_PWD"
 fi
 EOF
 
