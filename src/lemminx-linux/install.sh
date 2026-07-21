@@ -120,6 +120,7 @@ mkdir -p /opt/lemminx-linux/bin
 mkdir -p "${user_home}/.local/bin"
 unzip /tmp/lemminx-linux.zip -d /tmp
 mv "/tmp/lemminx-linux-$(arch)" "/opt/lemminx-linux/bin/lemminx-linux"
+chmod +x "/opt/lemminx-linux/bin/lemminx-linux"
 chown "${USERNAME}:${group_name}" "${user_home}/.local"
 chown "${USERNAME}:${group_name}" "${user_home}/.local/bin"
 ln -s /opt/lemminx-linux/bin/lemminx-linux "${user_home}/.local/bin/lemminx-linux"
