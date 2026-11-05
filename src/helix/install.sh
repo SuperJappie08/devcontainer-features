@@ -26,6 +26,7 @@ if type apt-get >/dev/null 2>&1; then
 		apt-get install helix -y --no-install-recommends
 	else
 		apt-get install -y --no-install-recommends curl jq ca-certificates
+		# NOTE: {repo}/releases/tags/{tag} gets specific version but deb not so long available
 		url=$(curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2026-03-10" \
 			https://api.github.com/repos/helix-editor/helix/releases/latest | jq '.assets[] | select(.name|endswith("deb")).browser_download_url' | cut -d '"' -f 2)
 		curl -fLo /tmp/helix.deb "$url"
